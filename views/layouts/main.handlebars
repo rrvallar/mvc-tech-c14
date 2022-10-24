@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+  <div class="wrapper">
+    <header>
+        <h1 class="px-4 py-4">A Tech Blog</h1>
+        <nav class="navbar mt-2">
+            {{#if loggedIn}}
+            <a href="/" class="navbar-item">homepage</a>
+            <a href="/dashboard/create/" class="navbar-item">create post</a>
+            <a href="/dashboard" class="navbar-item ">dashboard</a>
+
+
+            <button id="logout" class="button is-danger">logout</button>
+
+
+            {{else}}
+            <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
+            <a href="/login" class="button is-primary">login</a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main>
+            {{{ body }}}
+    </main>
+
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content center-text">
+            <p>
+            <a href="/">homepage</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">main space</a> | 
+            <a href="/dashboard/create/">POST</a>
+            {{else}}
+             | <a href="/login/">login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="content center-text row-is-full">
+
+  </div>
+    </footer>
+  </div>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+
+</html>

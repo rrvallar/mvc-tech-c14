@@ -1,0 +1,33 @@
+<div class="card mb-5">
+  <header class="card-header card-header-title">
+    
+        <div class="column">
+            <p class=" has-text-primary-light"></p>
+      <a href="/post/{{id}}"  class=" is-pulled-left">{{title}} </a></p>
+      
+      </div>
+
+      <div class="column">
+
+      <span class=""> </span>
+
+
+      </div>
+    
+  </header>
+
+    <div class="card-content">
+
+        <div class="content text-center">
+
+            {{post_content}}
+
+
+        </div>
+            <div class="is-pulled-right">
+
+
+                <b> {{user.username}} </b> 
+                 {{format_date created_at}}
+            </div>
+    </div>
